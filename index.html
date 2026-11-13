@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thongni Cleaning Service | TCS</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#183247;background:#f4faff}
+header{background:#087dbb;color:white;padding:22px;text-align:center}
+.logo{font-size:42px;font-weight:bold;border:3px solid white;border-radius:50%;display:inline-block;padding:5px 17px}
+h1{margin:10px 0}
+nav{background:#064d78;padding:14px;text-align:center}
+nav a{color:white;text-decoration:none;margin:10px;font-weight:bold}
+.hero{text-align:center;padding:55px 18px;background:linear-gradient(135deg,#d8f0ff,#fff)}
+.hero h2{font-size:34px;color:#075b91}
+.hero p{font-size:17px}
+.btn{display:inline-block;background:#087dbb;color:white;padding:14px 22px;border-radius:25px;text-decoration:none;font-weight:bold;border:0}
+section{padding:35px 18px;max-width:950px;margin:auto}
+h2{text-align:center;color:#075b91}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.service{background:white;padding:20px;border-radius:14px;text-align:center;box-shadow:0 3px 12px #b8d8e9}
+.service h3{color:#087dbb}
+.about{background:white;border-radius:15px;padding:25px;line-height:1.7}
+form{background:white;padding:22px;border-radius:15px;max-width:600px;margin:auto}
+label{display:block;margin-top:13px;font-weight:bold}
+input,select,textarea{width:100%;padding:13px;margin-top:6px;border:1px solid #bdd5e3;border-radius:8px;font-size:16px}
+textarea{height:90px}
+form button{width:100%;margin-top:20px;font-size:16px;cursor:pointer}
+footer{background:#06405f;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">TCS</div>
+<h1>THONGNI CLEANING SERVICE</h1>
+<p>SHILLONG, MEGHALAYA</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#booking">Book Us</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Your Clean Space, Our Responsibility!</h2>
+<p>Professional cleaning services in Shillong, Meghalaya.</p>
+<a class="btn" href="#booking">BOOK OUR SERVICE</a>
+</div>
+
+<section id="services">
+<h2>OUR CLEANING SERVICES</h2>
+<div class="services">
+<div class="service"><h3>💧 Water Tank Cleaning</h3></div>
+<div class="service"><h3>🪟 Window Cleaning</h3></div>
+<div class="service"><h3>🏡 Compound Cleaning</h3></div>
+<div class="service"><h3>🧹 Terrace Cleaning</h3></div>
+<div class="service"><h3>🛏️ Mattress Cleaning</h3></div>
+<div class="service"><h3>🧺 Blanket Washing</h3></div>
+<div class="service"><h3>Carpet Cleaning</h3></div>
+<div class="service"><h3>Fridge Cleaning</h3></div>
+<div class="service"><h3>Geezer Cleaning</h3></div>
+<div class="service"><h3>Garden Cleaning</h3></div>
+<div class="service"><h3>Post Construction Cleaning</h3></div>
+<div class="service"><h3>Laundry Services</h3></div>
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+<h2>ABOUT TCS</h2>
+<p>Thongni Cleaning Service is a local cleaning service based in Shillong, Meghalaya. We provide different types of cleaning services to customers. Our mission is to keep our surroundings clean, serve our customers and create employment opportunities for local youths.</p>
+</div>
+</section>
+
+<section id="booking">
+<h2>BOOK YOUR CLEANING SERVICE</h2>
+<form id="bookingForm">
+<label>Your Name *</label>
+<input id="name" required placeholder="Enter your name">
+
+<label>Phone Number *</label>
+<input id="phone" required type="tel" placeholder="Your phone number">
+
+<label>Select Service *</label>
+<select id="service" required>
+<option value="">Choose a service</option>
+<option>Water Tank Cleaning</option>
+<option>Window Cleaning</option>
+<option>Compound Cleaning</option>
+<option>Terrace Cleaning</option>
+<option>Mattress Cleaning</option>
+<option>Blanket Washing</option>
+<option>Carpet Cleaning</option>
+<option>Fridge Cleaning</option>
+<option>Geezer Cleaning</option>
+<option>Garden Cleaning</option>
+<option>Post Construction Cleaning</option>
+<option>Laundry</option>
+<option>Other Cleaning</option>
+</select>
+
+<label>Preferred Date</label>
+<input id="date" type="date">
+
+<label>Your Address *</label>
+<textarea id="address" required placeholder="Enter your location"></textarea>
+
+<button class="btn" type="submit">SEND BOOKING ON WHATSAPP</button>
+</form>
+</section>
+
+<footer>
+<h3>THONGNI CLEANING SERVICE (TCS)</h3>
+<p>Shillong, Meghalaya</p>
+<p>Phone / WhatsApp: 7085570344</p>
+<p>© 2026 TCS. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+e.preventDefault();
+let message="Hello TCS! I want to book a cleaning service.%0A"+
+"Name: "+encodeURIComponent(document.getElementById("name").value)+"%0A"+
+"Phone: "+encodeURIComponent(document.getElementById("phone").value)+"%0A"+
+"Service: "+encodeURIComponent(document.getElementById("service").value)+"%0A"+
+"Date: "+encodeURIComponent(document.getElementById("date").value)+"%0A"+
+"Address: "+encodeURIComponent(document.getElementById("address").value);
+window.open("https://wa.me/917085570344?text="+message,"_blank");
+});
+</script>
+
+</body>
+</html>
